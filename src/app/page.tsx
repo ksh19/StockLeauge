@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, {useState} from "react";
 import styles from "@/app/styles/page.module.css";
 import DownIcon from '@mui/icons-material/ArrowDropDown';
 import RightIcon from '@mui/icons-material/ChevronRight';
@@ -10,7 +10,11 @@ import TabMenu from "@/app/components/TabMenu";
 import { useRouter } from "next/navigation";
 
 export default function Home() {
+
+  const [activeTab, setActiveTab] = useState("전체");
+  const tabList = ["전체", "인기", "관심"];
   const router = useRouter();
+
   return (
     <div className={styles.container}>
       <div className={styles.topSection}>
@@ -42,7 +46,12 @@ export default function Home() {
 
       <h1 className={styles.stockTitle}>📈 오늘의 시세 📉</h1>
       <div className={styles.stockListContainer}>
-        <TabMenu/>
+        <TabMenu
+          tabs={tabList}
+          activeTab={activeTab}
+          onTabChange={(tab) => setActiveTab(tab)}
+          tabTextSize="2rem"
+        />
         <div className={styles.kategorie}>
           <h1>종목명</h1>
           <h1>종가</h1>

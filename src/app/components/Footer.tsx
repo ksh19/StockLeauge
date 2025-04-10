@@ -16,7 +16,7 @@ export default function Header() {
             <a className="cursor-default">|</a>
             <a href="/terms">이용약관</a>
           </div>
-          <p className="cursor-default">© 2025. Stock League Inc. All rights reserved.</p>
+          <p className="cursor-default">© 2025 Stock League. All rights reserved.</p>
         </div>
       </footer>
     );

@@ -3,20 +3,26 @@
 import React, {useState} from "react";
 import styles from "@/app/styles/components/TabMenu.module.css";
 
-export default function TabMenu() {
-    const [activeTab, setActiveTab] = useState("전체");
+interface TabMenuProps {
+  tabs: string[];
+  activeTab: string;
+  onTabChange: (tab: string) => void;
+  tabTextSize?: string;
+}
 
+export default function TabMenu({ tabs, activeTab, onTabChange, tabTextSize = "16px"}: TabMenuProps) {
     return (
-        <div className={styles.tabs}>
-          {["전체", "인기", "관심"].map((tab) => (
-            <button 
-            key={tab} 
+      <div className={styles.tabs}>
+        {tabs.map((tab) => (
+          <button
+            key={tab}
             className={`${styles.tab} ${activeTab === tab ? styles.activeTab : ""}`}
-            onClick={() => setActiveTab(tab)}
-            >
-              {tab}
-            </button>
-          ))}
-        </div>
+            onClick={() => onTabChange(tab)}
+            style={{ fontSize: tabTextSize }}
+          >
+            {tab}
+          </button>
+        ))}
+      </div>
     );
 }

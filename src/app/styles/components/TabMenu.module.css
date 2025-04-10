@@ -1,10 +1,11 @@
 .tabs {
     display: flex;
+    flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
     padding: 1.5rem;
-    gap: 55px;
+    gap: 40px;
 }
 .tab {
     font-size: 2rem;

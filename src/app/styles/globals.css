@@ -41,3 +41,16 @@ body.auth-page {
 footer {
   margin-top: 30px;
 }
+
+/* 전역 CSS 파일에만 적용 */
+input[type="text"]::-webkit-clear-button,
+input[type="text"]::-webkit-inner-spin-button,
+input[type="text"]::-webkit-outer-spin-button,
+input[type="text"]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+
+input[type="text"] {
+  -moz-appearance: textfield;
+}

@@ -3,7 +3,7 @@
 import styles from "./terms.module.css";
 import NextButton from "@/app/components/NextButton";
 
-export default function TermsPage() {
+export default function Terms() {
   return (
     <div className={styles.container}>
         <div className={styles.termsContainer}>

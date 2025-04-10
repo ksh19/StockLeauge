@@ -12,7 +12,8 @@ export default function Login() {
             <div className={styles.loginContainer}>
                 <h2 className={styles.loginTitle}>소셜 로그인</h2>
                 <h2 className={styles.loginContent}>
-                    로그인된 정보는 오직 본 서비스 내에서만 사용되며,<br/>외부로 제공되지 않습니다.</h2>
+                    로그인된 정보는 오직 본 서비스 내에서만 사용되며,<br/>외부로 제공되지 않습니다.
+                </h2>
                 <div className={styles.buttonContainer}>
                     <a href={KAKAO_AUTH_URL} className={styles.kakaoButton}>
                         <img src="/images/kakao.png" alt="카카오 로그인" className={styles.logoImg}/>

@@ -9,4 +9,4 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
         <main className="auth-content">{children}</main>
       </div>
     );
-  }
+}
